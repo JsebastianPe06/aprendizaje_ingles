@@ -1,0 +1,78 @@
+# -------------------------
+# ARCHIVOS DEL SISTEMA
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# ENTORNOS VIRTUALES
+# -------------------------
+venv/
+env/
+.venv/
+
+# -------------------------
+# CONFIGURACIONES DE EDICIÓN / IDE
+# -------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# -------------------------
+# BASES DE DATOS / ARCHIVOS DE USUARIO
+# -------------------------
+datos/estadisticas_usuarios/
+datos/*.db
+datos/*.sqlite
+datos/*.sqlite3
+
+# No subir datos sensibles
+configuracion.json
+*.secret
+*.token
+*.key
+
+# -------------------------
+# ARCHIVOS TEMPORALES DEL PROYECTO
+# -------------------------
+tmp/
+temp/
+*.log
+
+# -------------------------
+# ARCHIVOS DE LA INTERFAZ GRÁFICA
+# (si generas imágenes, íconos temporales o cache)
+# -------------------------
+interfaz/__pycache__/
+interfaz/temp/
+
+# -------------------------
+# MODELOS Y DATOS PESADOS
+# (por si más adelante usas embeddings o ML liviano)
+# -------------------------
+modelos/
+*.bin
+*.pickle
+*.pkl
+
+# -------------------------
+# ARCHIVOS GENERADOS (exportaciones, reportes, etc.)
+# -------------------------
+exportaciones/
+reportes/
+*.xlsx
+*.csv
+*.pdf
+
+# -------------------------
+# EJECUTABLES
+# -------------------------
+*.exe
+*.app
+dist/
+build/
