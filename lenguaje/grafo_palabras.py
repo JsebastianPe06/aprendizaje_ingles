@@ -126,7 +126,7 @@ class Grafo:
         print(f"✓ Grafo construido desde JSON: {len(self.grafo)} nodos, {conexiones_totales} conexiones")
         
         # Mostrar estadísticas
-        print("\n📊 ESTADÍSTICAS DEL GRAFO:")
+        print("\n ESTADÍSTICAS DEL GRAFO:")
         print(f"  Sustantivos: {len(self.palabras_por_categoria['sustantivo'])}")
         print(f"  Verbos: {len(self.palabras_por_categoria['verbo'])}")
         print(f"  Adjetivos: {len(self.palabras_por_categoria['adjetivo'])}")
