@@ -14,9 +14,9 @@ class LoggerConfig:
     
     @staticmethod
     def configurar_logger(nombre: str = 'aprendizaje_ingles',
-                         nivel: str = 'INFO',
-                         archivo: bool = True,
-                         consola: bool = True) -> logging.Logger:
+                        nivel: str = 'INFO',
+                        archivo: bool = True,
+                        consola: bool = True) -> logging.Logger:
         """
         Configura un logger para el sistema.
         
@@ -64,7 +64,6 @@ class AuditoriaUsuario:
     """
     Registra acciones importantes del usuario para análisis.
     """
-    
     def __init__(self, usuario_id: str):
         """
         Inicializa el auditor.
@@ -80,13 +79,14 @@ class AuditoriaUsuario:
         )
     
     def registrar_inicio_sesion(self):
-        """Registra el inicio de una sesión."""
+        """
+        Registra el inicio de una sesión.
+        """
         self.logger.info(f"Usuario {self.usuario_id} inició sesión")
     
     def registrar_fin_sesion(self, duracion: float, retos: int):
         """
         Registra el fin de una sesión.
-        
         :param duracion: Duración en minutos
         :param retos: Número de retos completados
         """
@@ -98,7 +98,7 @@ class AuditoriaUsuario:
     def registrar_reto(self, tipo: str, resultado: str, tiempo: float):
         """
         Registra un reto completado.
-        
+
         :param tipo: Tipo de reto
         :param resultado: 'correcto' o 'incorrecto'
         :param tiempo: Tiempo en segundos
@@ -155,7 +155,7 @@ class EstadisticasSesion:
         self.tipos_reto = []
     
     def registrar_reto(self, correcto: bool, tiempo: float, 
-                      palabra: str, tipo: str):
+        palabra: str, tipo: str):
         """
         Registra un reto completado.
         
@@ -176,12 +176,16 @@ class EstadisticasSesion:
         self.tipos_reto.append(tipo)
     
     def obtener_duracion(self) -> float:
-        """Obtiene la duración de la sesión en minutos."""
+        """
+        Obtiene la duración de la sesión en minutos.
+        """
         delta = datetime.now() - self.inicio
         return delta.total_seconds() / 60
     
     def obtener_precision(self) -> float:
-        """Obtiene la precisión de la sesión."""
+        """
+        Obtiene la precisión de la sesión.
+        """
         if self.retos_completados == 0:
             return 0.0
         return (self.retos_correctos / self.retos_completados) * 100
@@ -209,11 +213,11 @@ class EstadisticasSesion:
         print("\n" + "=" * 50)
         print("  RESUMEN DE LA SESIÓN")
         print("=" * 50)
-        print(f"⏱️  Duración: {resumen['duracion']:.1f} minutos")
-        print(f"📝 Retos completados: {resumen['retos_completados']}")
-        print(f"✅ Correctos: {resumen['retos_correctos']}")
-        print(f"❌ Incorrectos: {resumen['retos_incorrectos']}")
-        print(f"🎯 Precisión: {resumen['precision']:.1f}%")
-        print(f"📚 Palabras únicas: {resumen['palabras_unicas']}")
-        print(f"⚡ Tiempo promedio: {resumen['tiempo_promedio']:.1f}s por reto")
+        print(f"  Duración: {resumen['duracion']:.1f} minutos")
+        print(f" Retos completados: {resumen['retos_completados']}")
+        print(f" Correctos: {resumen['retos_correctos']}")
+        print(f" Incorrectos: {resumen['retos_incorrectos']}")
+        print(f" Precisión: {resumen['precision']:.1f}%")
+        print(f" Palabras únicas: {resumen['palabras_unicas']}")
+        print(f" Tiempo promedio: {resumen['tiempo_promedio']:.1f}s por reto")
         print("=" * 50)

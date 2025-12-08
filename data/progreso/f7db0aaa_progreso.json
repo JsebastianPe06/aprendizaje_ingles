@@ -66,22 +66,28 @@
     },
     "accessible": {
       "primera_vez": "2025-12-07T19:02:49.990190",
-      "ultima_practica": "2025-12-07T19:02:49.990203",
-      "veces_practicada": 1,
+      "ultima_practica": "2025-12-08T14:06:03.902601",
+      "veces_practicada": 2,
       "veces_correcta": 1,
-      "veces_incorrecta": 0,
-      "nivel_dominio": 72,
-      "estado": "aprendido",
+      "veces_incorrecta": 1,
+      "nivel_dominio": 30,
+      "estado": "aprendiendo",
       "categoria": null,
       "dominio": null,
-      "tiempo_promedio": 3.998986,
-      "racha_correctas": 1,
+      "tiempo_promedio": 2.935626,
+      "racha_correctas": 0,
       "historial": [
         {
           "fecha": "2025-12-07T19:02:49.990216",
           "correcto": true,
           "tiempo": 3.998986,
           "quality": 5
+        },
+        {
+          "fecha": "2025-12-08T14:06:03.902645",
+          "correcto": false,
+          "tiempo": 1.872266,
+          "quality": 0
         }
       ]
     },
@@ -129,43 +135,55 @@
     },
     "accusation": {
       "primera_vez": "2025-12-07T19:04:26.961955",
-      "ultima_practica": "2025-12-07T19:04:26.961968",
-      "veces_practicada": 1,
+      "ultima_practica": "2025-12-08T14:06:06.183839",
+      "veces_practicada": 2,
       "veces_correcta": 1,
-      "veces_incorrecta": 0,
-      "nivel_dominio": 72,
-      "estado": "aprendido",
+      "veces_incorrecta": 1,
+      "nivel_dominio": 30,
+      "estado": "aprendiendo",
       "categoria": null,
       "dominio": null,
-      "tiempo_promedio": 3.390738,
-      "racha_correctas": 1,
+      "tiempo_promedio": 2.5936665,
+      "racha_correctas": 0,
       "historial": [
         {
           "fecha": "2025-12-07T19:04:26.961988",
           "correcto": true,
           "tiempo": 3.390738,
           "quality": 5
+        },
+        {
+          "fecha": "2025-12-08T14:06:06.183889",
+          "correcto": false,
+          "tiempo": 1.796595,
+          "quality": 0
         }
       ]
     },
     "alert": {
       "primera_vez": "2025-12-07T19:04:29.801936",
-      "ultima_practica": "2025-12-07T19:04:29.801944",
-      "veces_practicada": 1,
-      "veces_correcta": 1,
+      "ultima_practica": "2025-12-08T14:05:29.943382",
+      "veces_practicada": 2,
+      "veces_correcta": 2,
       "veces_incorrecta": 0,
-      "nivel_dominio": 72,
+      "nivel_dominio": 69,
       "estado": "aprendido",
       "categoria": null,
       "dominio": null,
-      "tiempo_promedio": 2.038681,
-      "racha_correctas": 1,
+      "tiempo_promedio": 6.6705145,
+      "racha_correctas": 2,
       "historial": [
         {
           "fecha": "2025-12-07T19:04:29.801956",
           "correcto": true,
           "tiempo": 2.038681,
           "quality": 5
+        },
+        {
+          "fecha": "2025-12-08T14:05:29.943432",
+          "correcto": true,
+          "tiempo": 11.302348,
+          "quality": 3
         }
       ]
     },
@@ -192,7 +210,301 @@
     },
     "abuse": {
       "primera_vez": "2025-12-07T19:04:39.113680",
-      "ultima_practica": "2025-12-07T19:04:39.113693",
+      "ultima_practica": "2025-12-07T21:32:37.749046",
+      "veces_practicada": 2,
+      "veces_correcta": 2,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 69,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 10.3792685,
+      "racha_correctas": 2,
+      "historial": [
+        {
+          "fecha": "2025-12-07T19:04:39.113709",
+          "correcto": true,
+          "tiempo": 1.998604,
+          "quality": 5
+        },
+        {
+          "fecha": "2025-12-07T21:32:37.749092",
+          "correcto": true,
+          "tiempo": 18.759933,
+          "quality": 3
+        }
+      ]
+    },
+    "appealing": {
+      "primera_vez": "2025-12-07T21:31:58.157344",
+      "ultima_practica": "2025-12-08T14:06:09.382883",
+      "veces_practicada": 3,
+      "veces_correcta": 1,
+      "veces_incorrecta": 2,
+      "nivel_dominio": 45,
+      "estado": "aprendiendo",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 6.761036,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:31:58.157414",
+          "correcto": false,
+          "tiempo": 12.290842,
+          "quality": 0
+        },
+        {
+          "fecha": "2025-12-08T14:04:45.762030",
+          "correcto": false,
+          "tiempo": 6.629154,
+          "quality": 0
+        },
+        {
+          "fecha": "2025-12-08T14:06:09.382941",
+          "correcto": true,
+          "tiempo": 1.363112,
+          "quality": 3
+        }
+      ]
+    },
+    "accommodate": {
+      "primera_vez": "2025-12-07T21:32:11.957256",
+      "ultima_practica": "2025-12-08T13:53:53.666449",
+      "veces_practicada": 2,
+      "veces_correcta": 1,
+      "veces_incorrecta": 1,
+      "nivel_dominio": 57,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 7.759471,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:32:11.957315",
+          "correcto": false,
+          "tiempo": 11.385182,
+          "quality": 0
+        },
+        {
+          "fecha": "2025-12-08T13:53:53.666502",
+          "correcto": true,
+          "tiempo": 4.13376,
+          "quality": 5
+        }
+      ]
+    },
+    "anticipate": {
+      "primera_vez": "2025-12-07T21:32:45.026187",
+      "ultima_practica": "2025-12-07T21:32:45.026206",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 4.758017,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:32:45.026232",
+          "correcto": true,
+          "tiempo": 4.758017,
+          "quality": 3
+        }
+      ]
+    },
+    "activate": {
+      "primera_vez": "2025-12-07T21:32:48.961145",
+      "ultima_practica": "2025-12-08T14:05:58.463612",
+      "veces_practicada": 2,
+      "veces_correcta": 2,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 69,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 2.5939195,
+      "racha_correctas": 2,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:32:48.961194",
+          "correcto": true,
+          "tiempo": 2.885495,
+          "quality": 3
+        },
+        {
+          "fecha": "2025-12-08T14:05:58.463665",
+          "correcto": true,
+          "tiempo": 2.302344,
+          "quality": 3
+        }
+      ]
+    },
+    "activist": {
+      "primera_vez": "2025-12-07T21:32:54.665117",
+      "ultima_practica": "2025-12-08T14:05:34.590360",
+      "veces_practicada": 2,
+      "veces_correcta": 1,
+      "veces_incorrecta": 1,
+      "nivel_dominio": 47,
+      "estado": "aprendiendo",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 4.5170265,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:32:54.665171",
+          "correcto": false,
+          "tiempo": 4.873648,
+          "quality": 0
+        },
+        {
+          "fecha": "2025-12-08T14:05:34.590410",
+          "correcto": true,
+          "tiempo": 4.160405,
+          "quality": 3
+        }
+      ]
+    },
+    "academy": {
+      "primera_vez": "2025-12-07T21:32:58.307076",
+      "ultima_practica": "2025-12-07T21:32:58.307097",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 2.709141,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:32:58.307128",
+          "correcto": true,
+          "tiempo": 2.709141,
+          "quality": 3
+        }
+      ]
+    },
+    "accelerate": {
+      "primera_vez": "2025-12-07T21:33:01.995838",
+      "ultima_practica": "2025-12-07T21:33:01.995858",
+      "veces_practicada": 1,
+      "veces_correcta": 0,
+      "veces_incorrecta": 1,
+      "nivel_dominio": 5,
+      "estado": "nuevo",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 2.831788,
+      "racha_correctas": 0,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:33:01.995888",
+          "correcto": false,
+          "tiempo": 2.831788,
+          "quality": 0
+        }
+      ]
+    },
+    "accent": {
+      "primera_vez": "2025-12-07T21:33:06.382065",
+      "ultima_practica": "2025-12-07T21:33:06.382085",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 3.603576,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:33:06.382118",
+          "correcto": true,
+          "tiempo": 3.603576,
+          "quality": 3
+        }
+      ]
+    },
+    "applaud": {
+      "primera_vez": "2025-12-07T21:33:10.715428",
+      "ultima_practica": "2025-12-07T21:33:10.715467",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 3.632515,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-07T21:33:10.715507",
+          "correcto": true,
+          "tiempo": 3.632515,
+          "quality": 3
+        }
+      ]
+    },
+    "administrative": {
+      "primera_vez": "2025-12-08T13:53:25.751443",
+      "ultima_practica": "2025-12-08T13:53:25.751466",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 67,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 5.43587,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T13:53:25.751507",
+          "correcto": true,
+          "tiempo": 5.43587,
+          "quality": 4
+        }
+      ]
+    },
+    "accumulation": {
+      "primera_vez": "2025-12-08T13:53:43.378181",
+      "ultima_practica": "2025-12-08T14:05:55.622347",
+      "veces_practicada": 2,
+      "veces_correcta": 2,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 69,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 10.5411315,
+      "racha_correctas": 2,
+      "historial": [
+        {
+          "fecha": "2025-12-08T13:53:43.378229",
+          "correcto": true,
+          "tiempo": 14.286868,
+          "quality": 3
+        },
+        {
+          "fecha": "2025-12-08T14:05:55.622398",
+          "correcto": true,
+          "tiempo": 6.795395,
+          "quality": 3
+        }
+      ]
+    },
+    "administer": {
+      "primera_vez": "2025-12-08T13:53:48.645744",
+      "ultima_practica": "2025-12-08T13:53:48.645773",
       "veces_practicada": 1,
       "veces_correcta": 1,
       "veces_incorrecta": 0,
@@ -200,14 +512,272 @@
       "estado": "aprendido",
       "categoria": null,
       "dominio": null,
-      "tiempo_promedio": 1.998604,
+      "tiempo_promedio": 4.157455,
       "racha_correctas": 1,
       "historial": [
         {
-          "fecha": "2025-12-07T19:04:39.113709",
+          "fecha": "2025-12-08T13:53:48.645798",
           "correcto": true,
-          "tiempo": 1.998604,
+          "tiempo": 4.157455,
           "quality": 5
+        }
+      ]
+    },
+    "appoint": {
+      "primera_vez": "2025-12-08T13:54:01.281521",
+      "ultima_practica": "2025-12-08T13:54:01.281540",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 67,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 7.022465,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T13:54:01.281572",
+          "correcto": true,
+          "tiempo": 7.022465,
+          "quality": 4
+        }
+      ]
+    },
+    "acute": {
+      "primera_vez": "2025-12-08T14:04:24.208358",
+      "ultima_practica": "2025-12-08T14:04:24.208381",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 21.851245,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:04:24.208425",
+          "correcto": true,
+          "tiempo": 21.851245,
+          "quality": 3
+        }
+      ]
+    },
+    "adjust": {
+      "primera_vez": "2025-12-08T14:04:31.404665",
+      "ultima_practica": "2025-12-08T14:05:11.513265",
+      "veces_practicada": 2,
+      "veces_correcta": 2,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 74,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 6.3269665,
+      "racha_correctas": 2,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:04:31.404722",
+          "correcto": true,
+          "tiempo": 4.464404,
+          "quality": 5
+        },
+        {
+          "fecha": "2025-12-08T14:05:11.513313",
+          "correcto": true,
+          "tiempo": 8.189529,
+          "quality": 4
+        }
+      ]
+    },
+    "amusing": {
+      "primera_vez": "2025-12-08T14:04:38.250497",
+      "ultima_practica": "2025-12-08T14:04:38.250518",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 6.105633,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:04:38.250549",
+          "correcto": true,
+          "tiempo": 6.105633,
+          "quality": 3
+        }
+      ]
+    },
+    "advocate": {
+      "primera_vez": "2025-12-08T14:04:54.169940",
+      "ultima_practica": "2025-12-08T14:04:54.169960",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 7.171607,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:04:54.169994",
+          "correcto": true,
+          "tiempo": 7.171607,
+          "quality": 3
+        }
+      ]
+    },
+    "align": {
+      "primera_vez": "2025-12-08T14:05:18.047868",
+      "ultima_practica": "2025-12-08T14:05:18.047888",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 67,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 5.376035,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:05:18.047919",
+          "correcto": true,
+          "tiempo": 5.376035,
+          "quality": 4
+        }
+      ]
+    },
+    "abortion": {
+      "primera_vez": "2025-12-08T14:05:39.694184",
+      "ultima_practica": "2025-12-08T14:05:39.694206",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 4.531,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:05:39.694243",
+          "correcto": true,
+          "tiempo": 4.531,
+          "quality": 3
+        }
+      ]
+    },
+    "anonymous": {
+      "primera_vez": "2025-12-08T14:05:59.471087",
+      "ultima_practica": "2025-12-08T14:05:59.471110",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 72,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 0.574869,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:05:59.471143",
+          "correcto": true,
+          "tiempo": 0.574869,
+          "quality": 5
+        }
+      ]
+    },
+    "allege": {
+      "primera_vez": "2025-12-08T14:06:01.529448",
+      "ultima_practica": "2025-12-08T14:06:01.529468",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 62,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 1.495094,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:06:01.529502",
+          "correcto": true,
+          "tiempo": 1.495094,
+          "quality": 3
+        }
+      ]
+    },
+    "accordance": {
+      "primera_vez": "2025-12-08T14:06:07.324212",
+      "ultima_practica": "2025-12-08T14:06:07.324236",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 72,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 0.615421,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:06:07.324275",
+          "correcto": true,
+          "tiempo": 0.615421,
+          "quality": 5
+        }
+      ]
+    },
+    "aesthetic": {
+      "primera_vez": "2025-12-08T14:06:10.301771",
+      "ultima_practica": "2025-12-08T14:06:10.301793",
+      "veces_practicada": 1,
+      "veces_correcta": 1,
+      "veces_incorrecta": 0,
+      "nivel_dominio": 72,
+      "estado": "aprendido",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 0.442811,
+      "racha_correctas": 1,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:06:10.301831",
+          "correcto": true,
+          "tiempo": 0.442811,
+          "quality": 5
+        }
+      ]
+    },
+    "affordable": {
+      "primera_vez": "2025-12-08T14:06:12.145050",
+      "ultima_practica": "2025-12-08T14:06:12.145071",
+      "veces_practicada": 1,
+      "veces_correcta": 0,
+      "veces_incorrecta": 1,
+      "nivel_dominio": 5,
+      "estado": "nuevo",
+      "categoria": null,
+      "dominio": null,
+      "tiempo_promedio": 1.365442,
+      "racha_correctas": 0,
+      "historial": [
+        {
+          "fecha": "2025-12-08T14:06:12.145109",
+          "correcto": false,
+          "tiempo": 1.365442,
+          "quality": 0
         }
       ]
     }
@@ -266,17 +836,58 @@
       "retos_completados": 5,
       "precision": 80.0,
       "duracion": 0.8397677166666667
+    },
+    {
+      "fecha": "2025-12-07T21:33:11.735314",
+      "tipo_reto": "mixto",
+      "retos_completados": 10,
+      "precision": 60.0,
+      "duracion": 1.4484390333333332
+    },
+    {
+      "fecha": "2025-12-08T13:54:01.979230",
+      "tipo_reto": "mixto",
+      "retos_completados": 5,
+      "precision": 100.0,
+      "duracion": 0.711715
+    },
+    {
+      "fecha": "2025-12-08T14:04:55.045425",
+      "tipo_reto": "mixto",
+      "retos_completados": 5,
+      "precision": 80.0,
+      "duracion": 0.8953520333333334
+    },
+    {
+      "fecha": "2025-12-08T14:05:40.205938",
+      "tipo_reto": "mixto",
+      "retos_completados": 5,
+      "precision": 100.0,
+      "duracion": 0.6378118666666667
+    },
+    {
+      "fecha": "2025-12-08T14:06:12.621550",
+      "tipo_reto": "mixto",
+      "retos_completados": 10,
+      "precision": 70.0,
+      "duracion": 0.41392931666666666
     }
   ],
   "rendimiento": {
     "fortalezas": [
       {
         "tipo": "mixto",
-        "precision": 90.0
+        "precision": 84.28571428571429
       }
     ],
     "debilidades": [],
-    "palabras_dificiles": [],
+    "palabras_dificiles": [
+      {
+        "palabra": "appealing",
+        "precision": 33.33333333333333,
+        "practicas": 3
+      }
+    ],
     "palabras_faciles": []
   }
 }

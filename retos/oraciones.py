@@ -1,14 +1,14 @@
 """
 PARCHES PARA oraciones.py
-Reemplaza solo estas funciones específicas en tu archivo oraciones.py existente
 """
-
-# ============================================================
-# EN RetoTraducirOracion - Reemplazar _generar_traduccion_base()
-# ============================================================
+import random
+from typing import Dict, Any, List
+from .base import RetoBase
 
 def _generar_traduccion_base(self) -> str:
-    """Genera una traducción básica palabra por palabra."""
+    """
+    Genera una traducción básica palabra por palabra.
+    """
     palabras = self.oracion_inglés.split()
     traduccion = []
     
@@ -28,21 +28,10 @@ def _generar_traduccion_base(self) -> str:
     
     return ' '.join(traduccion)
 
-
-# ============================================================
-# RESUMEN COMPLETO DE CAMBIOS PARA oraciones.py
-# ============================================================
 """
 El archivo oraciones.py solo necesita este cambio menor en RetoTraducirOracion.
-
 Los métodos RetoCompletarOracion y RetoOrdenarOracion ya funcionan correctamente
 con la estructura del JSON porque no dependen de traducciones específicas.
-
-CAMBIO ÚNICO NECESARIO:
-En RetoTraducirOracion, método _generar_traduccion_base():
-- Cambiar: info.get('traduccion')
-- Por: info.get('traducciones', {}).get('es', [])[0] si existe, sino usar [palabra]
-
 Ese es el ÚNICO cambio necesario en oraciones.py
 """
 
@@ -55,10 +44,6 @@ Retos con oraciones: completar, ordenar, traducir, corregir.
 VERSIÓN CORREGIDA para estructura JSON real
 """
 
-import random
-from typing import Dict, Any, List
-from .base import RetoBase
-
 class RetoCompletarOracion(RetoBase):
     """
     Completar una oración con la palabra correcta.
@@ -66,8 +51,8 @@ class RetoCompletarOracion(RetoBase):
     """
     
     def __init__(self, palabra_objetivo: str, generador, diccionario, analizador,
-                 nivel_dificultad: str = "intermedio",
-                 con_opciones: bool = True):
+                nivel_dificultad: str = "intermedio",
+                con_opciones: bool = True):
         """
         :param palabra_objetivo: Palabra que debe completar
         :param generador: Instancia de GeneradorGramatical
@@ -209,7 +194,7 @@ class RetoOrdenarOracion(RetoBase):
     """
     
     def __init__(self, palabra_objetivo: str, generador, analizador,
-                 nivel_dificultad: str = "intermedio"):
+                nivel_dificultad: str = "intermedio"):
         """
         :param palabra_objetivo: Palabra clave de la oración
         :param generador: Instancia de GeneradorGramatical
@@ -322,8 +307,8 @@ class RetoTraducirOracion(RetoBase):
     """
     
     def __init__(self, palabra_objetivo: str, generador, diccionario, analizador,
-                 nivel_dificultad: str = "intermedio",
-                 ingles_a_espanol: bool = True):
+        nivel_dificultad: str = "intermedio",
+        ingles_a_espanol: bool = True):
         """
         :param palabra_objetivo: Palabra clave
         :param generador: Instancia de GeneradorGramatical

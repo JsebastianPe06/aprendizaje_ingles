@@ -1,12 +1,12 @@
 {
-  "usuario_id": "f7db0aaa",
-  "nombre": "Alejandro Bello",
+  "usuario_id": "2e2f22ea",
+  "nombre": "Juan",
   "email": "",
-  "fecha_registro": "2025-12-07T18:46:44.015618",
-  "ultima_sesion": "2025-12-08T14:06:12.621514",
-  "nivel_actual": 17,
-  "nivel_cefr": "A2",
-  "experiencia": 3690,
+  "fecha_registro": "2025-12-08T14:00:17.462547",
+  "ultima_sesion": "2025-12-08T14:47:52.865996",
+  "nivel_actual": 3,
+  "nivel_cefr": "A1",
+  "experiencia": 470,
   "preferencias": {
     "temas_favoritos": [
       "general"
@@ -19,19 +19,19 @@
     "idioma_interfaz": "es"
   },
   "estadisticas": {
-    "total_sesiones": 7,
-    "total_retos_completados": 45,
+    "total_sesiones": 3,
+    "total_retos_completados": 8,
     "total_palabras_aprendidas": 0,
     "racha_actual": 0,
     "racha_maxima": 0,
-    "tiempo_total_estudio": 6.0214638,
-    "precision_promedio": 80.0
+    "tiempo_total_estudio": 2.7930286833333335,
+    "precision_promedio": 50.0
   },
   "objetivos": {
     "objetivo_semanal": 25,
     "objetivo_mensual": 100,
-    "progreso_semanal": 45,
-    "progreso_mensual": 45
+    "progreso_semanal": 8,
+    "progreso_mensual": 8
   },
   "logros": []
 }

@@ -18,9 +18,9 @@ class RetoFormarPalabras(RetoBase):
     """
     
     def __init__(self, palabra_objetivo: str, diccionario, analizador,
-                 nivel_dificultad: str = "intermedio",
-                 con_pista: bool = True,
-                 letras_extra: int = 0):
+                nivel_dificultad: str = "intermedio",
+                con_pista: bool = True,
+                letras_extra: int = 0):
         """
         :param palabra_objetivo: Palabra a formar
         :param diccionario: Instancia de Diccionario
@@ -36,32 +36,28 @@ class RetoFormarPalabras(RetoBase):
         self.letras_extra = letras_extra
         self.letras_mezcladas = []
         self.pista = None
-        
+
     def generar(self) -> Dict[str, Any]:
-        """Genera el reto de formar palabra."""
+        """
+        Genera el reto de formar palabra.
+        """
         info = self.diccionario.obtener_info(self.palabra_objetivo)
-        
         if not info:
             raise ValueError(f"Palabra '{self.palabra_objetivo}' no encontrada")
-        
         # Obtener letras de la palabra
         letras = list(self.palabra_objetivo.lower())
-        
         # Agregar letras extra (distractores) si se especifica
         if self.letras_extra > 0:
             letras_distractoras = self._generar_letras_extra(letras)
             letras.extend(letras_distractoras)
-        
         # Mezclar letras
         self.letras_mezcladas = letras.copy()
         random.shuffle(self.letras_mezcladas)
-        
         # Asegurar que no quede igual a la palabra original
         intentos = 0
         while ''.join(self.letras_mezcladas) == self.palabra_objetivo.lower() and intentos < 10:
             random.shuffle(self.letras_mezcladas)
             intentos += 1
-        
         # Generar pista si se requiere - ESTRUCTURA REAL DEL JSON
         if self.con_pista:
             # Primero intentar traducción
@@ -72,7 +68,6 @@ class RetoFormarPalabras(RetoBase):
                 # Fallback a definición
                 definiciones = info.get('definiciones', [])
                 self.pista = definiciones[0] if definiciones else 'Sin pista'
-        
         return {
             'tipo_reto': 'formar_palabras',
             'letras': self.letras_mezcladas,
@@ -82,29 +77,26 @@ class RetoFormarPalabras(RetoBase):
             'pregunta': self._generar_pregunta(),
             'tiene_letras_extra': self.letras_extra > 0
         }
-    
+
     def _generar_pregunta(self) -> str:
         """Genera el texto de la pregunta."""
         base = f"Ordena las letras para formar una palabra"
-        
         if self.letras_extra > 0:
             base += f" (hay {self.letras_extra} letra(s) extra)"
-        
         if self.pista:
             base += f"\nPista: {self.pista}"
-        
         return base
-    
+
     def _generar_letras_extra(self, letras_originales: List[str]) -> List[str]:
-        """Genera letras adicionales como distractores."""
+        """
+        Genera letras adicionales como distractores.
+        """
         vocales = ['a', 'e', 'i', 'o', 'u']
         consonantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 
-                      'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-        
+                    'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
         # Contar vocales y consonantes en la palabra original
         vocales_originales = sum(1 for l in letras_originales if l in vocales)
         consonantes_originales = len(letras_originales) - vocales_originales
-        
         extras = []
         for _ in range(self.letras_extra):
             # Decidir si agregar vocal o consonante (proporcional a la palabra)
@@ -122,7 +114,6 @@ class RetoFormarPalabras(RetoBase):
                     extras.append(random.choice(candidatas))
                 else:
                     extras.append(random.choice(consonantes))
-        
         return extras
     
     def verificar(self, respuesta: Any) -> Dict[str, Any]:
@@ -133,28 +124,20 @@ class RetoFormarPalabras(RetoBase):
         :return: Diccionario con resultado
         """
         self.intentos += 1
-        
         if not isinstance(respuesta, str):
             respuesta = str(respuesta)
-        
         respuesta = respuesta.strip().lower()
-        
         # Usar analizador para verificación flexible (tolera pequeños errores)
-        correcto = self.analizador.verificar_respuesta_exacta(
-            respuesta=respuesta,
-            solucion=self.palabra_objetivo,
-            umbral=0.9  # Más estricto que en otros contextos
-        )
-        
+        correcto = self.analizador.verificar_respuesta_exacta(respuesta=respuesta,
+            solucion=self.palabra_objetivo, umbral=0.9)
         mensaje = ""
         if correcto:
-            self.puntaje = 100 - (self.intentos - 1) * 20  # Penalizar intentos
+            self.puntaje = 100 - (self.intentos - 1) * 20
             self.puntaje = max(0, self.puntaje)
-            mensaje = f"¡Correcto! La palabra es '{self.palabra_objetivo}' 🎉"
+            mensaje = f"¡Correcto! La palabra es '{self.palabra_objetivo}'"
             self.finalizar()
         else:
             self.puntaje = max(0, 100 - (self.intentos * 25))
-            
             if self.intentos >= self.max_intentos:
                 mensaje = f"Se acabaron los intentos. La palabra era: '{self.palabra_objetivo}'"
                 self.finalizar()
@@ -164,9 +147,7 @@ class RetoFormarPalabras(RetoBase):
                     mensaje = f"Incorrecto. La palabra tiene {len(self.palabra_objetivo)} letras. "
                 else:
                     mensaje = "Incorrecto. "
-                
                 mensaje += f"Intento {self.intentos}/{self.max_intentos}"
-                
                 # Mostrar pista en segundo intento si no la había - ESTRUCTURA REAL DEL JSON
                 if self.intentos == 2 and not self.con_pista:
                     info = self.diccionario.obtener_info(self.palabra_objetivo)
@@ -176,9 +157,7 @@ class RetoFormarPalabras(RetoBase):
                     else:
                         self.pista = 'Sin pista adicional'
                     mensaje += f"\nPista: {self.pista}"
-        
         quality = self.calcular_quality(correcto, self.obtener_tiempo_respuesta())
-        
         return {
             'correcto': correcto,
             'mensaje': mensaje,
@@ -200,7 +179,7 @@ class RetoFormarPalabrasMultiple(RetoBase):
     """
     
     def __init__(self, palabras_objetivo: List[str], diccionario, analizador,
-                 nivel_dificultad: str = "avanzado"):
+        nivel_dificultad: str = "avanzado"):
         """
         :param palabras_objetivo: Lista de palabras que se pueden formar
         :param diccionario: Instancia de Diccionario
@@ -218,15 +197,12 @@ class RetoFormarPalabrasMultiple(RetoBase):
         """Genera el reto de formar múltiples palabras."""
         if not self.palabras_objetivo:
             raise ValueError("Debe proporcionar al menos una palabra objetivo")
-        
         # Generar conjunto de letras que permita formar todas las palabras
         todas_letras = set()
         for palabra in self.palabras_objetivo:
             todas_letras.update(palabra.lower())
-        
         self.letras_disponibles = list(todas_letras)
         random.shuffle(self.letras_disponibles)
-        
         return {
             'tipo_reto': 'formar_palabras_multiple',
             'letras': self.letras_disponibles,
@@ -239,14 +215,11 @@ class RetoFormarPalabrasMultiple(RetoBase):
     def verificar(self, respuesta: Any) -> Dict[str, Any]:
         """Verifica si la palabra formada es una de las objetivo."""
         self.intentos += 1
-        
         if not isinstance(respuesta, str):
             respuesta = str(respuesta)
-        
         respuesta = respuesta.strip().lower()
         correcto = False
         mensaje = ""
-        
         # Verificar si es una de las palabras objetivo
         for palabra in self.palabras_objetivo:
             if self.analizador.verificar_respuesta_exacta(respuesta, palabra, umbral=0.9):
@@ -257,10 +230,8 @@ class RetoFormarPalabrasMultiple(RetoBase):
                 else:
                     mensaje = f"Ya habías encontrado '{palabra}'"
                 break
-        
         if not correcto and respuesta not in [p for p in self.palabras_objetivo]:
             mensaje = f"'{respuesta}' no es una de las palabras objetivo"
-        
         # Verificar si completó todas
         if len(self.palabras_encontradas) == len(self.palabras_objetivo):
             self.finalizar()
@@ -268,9 +239,7 @@ class RetoFormarPalabrasMultiple(RetoBase):
             self.puntaje = 100
         else:
             self.puntaje = int((len(self.palabras_encontradas) / len(self.palabras_objetivo)) * 100)
-        
         quality = 4 if len(self.palabras_encontradas) == len(self.palabras_objetivo) else 3
-        
         return {
             'correcto': correcto,
             'mensaje': mensaje,

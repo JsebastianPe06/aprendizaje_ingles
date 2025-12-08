@@ -19,9 +19,9 @@ class RetoTarjetas(RetoBase):
     """
     
     def __init__(self, palabra_objetivo: str, diccionario, 
-                 nivel_dificultad: str = "intermedio",
-                 tipo: str = "traduccion",
-                 num_opciones: int = 4):
+                nivel_dificultad: str = "intermedio",
+                tipo: str = "traduccion",
+                num_opciones: int = 4):
         """
         :param palabra_objetivo: Palabra a practicar
         :param diccionario: Instancia de Diccionario
@@ -38,12 +38,12 @@ class RetoTarjetas(RetoBase):
         self.indice_correcto = None
         
     def generar(self) -> Dict[str, Any]:
-        """Genera el reto de tarjeta."""
+        """
+        Genera el reto de tarjeta.
+        """
         info = self.diccionario.obtener_info(self.palabra_objetivo)
-        
         if not info:
             raise ValueError(f"Palabra '{self.palabra_objetivo}' no encontrada en diccionario")
-        
         # Obtener respuesta correcta según tipo - ESTRUCTURA REAL DEL JSON
         if self.tipo == "traduccion":
             traducciones_es = info.get('traducciones', {}).get('es', [])
@@ -64,14 +64,11 @@ class RetoTarjetas(RetoBase):
                 # Fallback a traducción
                 traducciones_es = info.get('traducciones', {}).get('es', [])
                 self.respuesta_correcta = traducciones_es[0] if traducciones_es else 'Sin sinónimo'
-        
         # Generar opciones incorrectas (distractores)
         self.opciones = self._generar_distractores()
-        
         # Insertar respuesta correcta en posición aleatoria
         self.indice_correcto = random.randint(0, len(self.opciones))
         self.opciones.insert(self.indice_correcto, self.respuesta_correcta)
-        
         return {
             'tipo_reto': 'tarjetas',
             'tipo_tarjeta': self.tipo,
@@ -96,23 +93,18 @@ class RetoTarjetas(RetoBase):
         distractores = []
         info_objetivo = self.diccionario.obtener_info(self.palabra_objetivo)
         categoria = info_objetivo.get('categorias', ['general'])[0] if info_objetivo else 'general'
-        
         # Obtener palabras de la misma categoría
         palabras_categoria = self.diccionario.palabras_por_categoria(categoria)
-        
         # Filtrar la palabra objetivo
         palabras_candidatas = [p for p in palabras_categoria if p != self.palabra_objetivo]
         random.shuffle(palabras_candidatas)
-        
         # Generar distractores
         for palabra in palabras_candidatas:
             if len(distractores) >= self.num_opciones - 1:
                 break
-                
             info = self.diccionario.obtener_info(palabra)
             if not info:
                 continue
-            
             if self.tipo == "traduccion":
                 traducciones_es = info.get('traducciones', {}).get('es', [])
                 distractor = traducciones_es[0] if traducciones_es else None
@@ -130,20 +122,16 @@ class RetoTarjetas(RetoBase):
                 else:
                     traducciones_es = info.get('traducciones', {}).get('es', [])
                     distractor = traducciones_es[0] if traducciones_es else None
-            
             if distractor and distractor != self.respuesta_correcta:
                 distractores.append(distractor)
-        
         # Si no hay suficientes distractores, agregar genéricos
         distractores_genericos = [
             "opción incorrecta A",
             "opción incorrecta B", 
             "opción incorrecta C"
         ]
-        
         while len(distractores) < self.num_opciones - 1:
             distractores.append(distractores_genericos[len(distractores)])
-        
         return distractores[:self.num_opciones - 1]
     
     def verificar(self, respuesta: Any) -> Dict[str, Any]:
@@ -156,7 +144,6 @@ class RetoTarjetas(RetoBase):
         self.intentos += 1
         correcto = False
         mensaje = ""
-        
         # Convertir respuesta a índice si es necesario
         if isinstance(respuesta, str):
             try:
@@ -173,12 +160,11 @@ class RetoTarjetas(RetoBase):
                         'quality': 0,
                         'completado': False
                     }
-        
         # Verificar si es correcto
         if respuesta == self.indice_correcto:
             correcto = True
             self.puntaje = 100
-            mensaje = "¡Correcto! 🎉"
+            mensaje = "¡Correcto!"
             self.finalizar()
         else:
             self.puntaje = max(0, 100 - (self.intentos * 30))
@@ -187,10 +173,8 @@ class RetoTarjetas(RetoBase):
                 self.finalizar()
             else:
                 mensaje = f"Incorrecto. Intento {self.intentos}/{self.max_intentos}"
-        
         # Calcular quality para SRS
         quality = self.calcular_quality(correcto, self.obtener_tiempo_respuesta())
-        
         return {
             'correcto': correcto,
             'mensaje': mensaje,
@@ -208,14 +192,12 @@ class RetoTarjetasInverso(RetoTarjetas):
     """
     Variante inversa: mostrar significado/traducción y pedir la palabra en inglés.
     """
-    
     def generar(self) -> Dict[str, Any]:
         """Genera el reto inverso."""
         info = self.diccionario.obtener_info(self.palabra_objetivo)
         
         if not info:
             raise ValueError(f"Palabra '{self.palabra_objetivo}' no encontrada")
-        
         # En este caso, la "pregunta" es el significado - ESTRUCTURA REAL DEL JSON
         if self.tipo == "traduccion":
             traducciones_es = info.get('traducciones', {}).get('es', [])
@@ -230,22 +212,17 @@ class RetoTarjetasInverso(RetoTarjetas):
         else:
             traducciones_es = info.get('traducciones', {}).get('es', [])
             pregunta_texto = traducciones_es[0] if traducciones_es else 'Sin información'
-        
         # La respuesta correcta es la palabra en inglés
         self.respuesta_correcta = self.palabra_objetivo
-        
         # Generar distractores (otras palabras en inglés)
         categoria = info.get('categorias', ['general'])[0]
         palabras_categoria = self.diccionario.palabras_por_categoria(categoria)
         palabras_candidatas = [p for p in palabras_categoria if p != self.palabra_objetivo]
         random.shuffle(palabras_candidatas)
-        
         self.opciones = palabras_candidatas[:self.num_opciones - 1]
-        
         # Insertar respuesta correcta
         self.indice_correcto = random.randint(0, len(self.opciones))
         self.opciones.insert(self.indice_correcto, self.respuesta_correcta)
-        
         return {
             'tipo_reto': 'tarjetas_inverso',
             'tipo_tarjeta': self.tipo,
