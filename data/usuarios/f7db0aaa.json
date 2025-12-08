@@ -1,0 +1,37 @@
+{
+  "usuario_id": "f7db0aaa",
+  "nombre": "Alejandro Bello",
+  "email": "",
+  "fecha_registro": "2025-12-07T18:46:44.015618",
+  "ultima_sesion": "2025-12-07T19:04:39.691810",
+  "nivel_actual": 5,
+  "nivel_cefr": "A1",
+  "experiencia": 910,
+  "preferencias": {
+    "temas_favoritos": [
+      "general"
+    ],
+    "tipos_reto_favoritos": [],
+    "dificultad_preferida": "intermedio",
+    "objetivo_diario": 5,
+    "notificaciones": true,
+    "modo_oscuro": false,
+    "idioma_interfaz": "es"
+  },
+  "estadisticas": {
+    "total_sesiones": 2,
+    "total_retos_completados": 10,
+    "total_palabras_aprendidas": 0,
+    "racha_actual": 0,
+    "racha_maxima": 0,
+    "tiempo_total_estudio": 1.9142165500000003,
+    "precision_promedio": 90.0
+  },
+  "objetivos": {
+    "objetivo_semanal": 25,
+    "objetivo_mensual": 100,
+    "progreso_semanal": 10,
+    "progreso_mensual": 10
+  },
+  "logros": []
+}
