@@ -1,0 +1,37 @@
+{
+  "vocabulary": [
+    {
+      "word": "apple",
+      "definition": "A round fruit of a tree of the rose family, which typically has thin green or red skin and crisp flesh."
+    },
+    {
+      "word": "banana",
+      "definition": "A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe."
+    },
+    {
+      "word": "grape",
+      "definition": "A berry, typically green, red, or purple, growing in clusters on a vine, used for making wine or eaten as fruit."
+    },
+    {
+      "word": "orange",
+      "definition": "A round juicy citrus fruit with a tough bright reddish-yellow rind."
+    },
+    {
+      "word": "strawberry",
+      "definition": "A sweet soft red fruit with a seed-studded surface."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": "Which fruit is yellow when ripe?",
+      "options": ["Apple", "Banana", "Grape", "Orange"],
+      "answer": "Banana"
+    },
+    {
+      "type": "fill_in_the_blank",
+      "question": "The color of a ripe orange is ______.",
+      "answer": "orange"
+    }
+  ]
+}

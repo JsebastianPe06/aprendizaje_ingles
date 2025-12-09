@@ -1,0 +1,373 @@
+.srs-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 90vh;
+}
+
+.srs-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.srs-header h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.srs-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.estadisticas-srs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-number {
+  color: #667eea;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.proximas-palabras {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.proximas-palabras h3 {
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+.palabras-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.palabra-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.palabra-item .palabra {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.palabra-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dificultad-1 {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.dificultad-2 {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.dificultad-3 {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.dificultad-4 {
+  background: #ffe5e5;
+  color: #721c24;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.dificultad-5 {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.revisiones {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.action-buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-grande {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-grande:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.no-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-content p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+/* Modo Estudio */
+.srs-page.study-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.srs-study-header {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.srs-study-header h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.srs-study-header .progress-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem auto;
+}
+
+.srs-study-header .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.srs-study-header span {
+  color: #666;
+}
+
+.srs-card-container {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.srs-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.card-header h2 {
+  color: #667eea;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.difficulty-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.difficulty-badge.difficulty-1,
+.difficulty-badge.difficulty-2 {
+  background: #d4edda;
+  color: #155724;
+}
+
+.difficulty-badge.difficulty-3 {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.difficulty-badge.difficulty-4,
+.difficulty-badge.difficulty-5 {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.card-body {
+  text-align: center;
+  color: #666;
+}
+
+.revisiones-info {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.proximarevision-info {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.btn-reveal {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-reveal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.srs-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #333;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-warning:hover {
+  background: #e0a800;
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-success:hover {
+  background: #218838;
+}
+
+.btn-exit {
+  background: #6c757d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-exit:hover {
+  background: #5a6268;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-size: 1.2rem;
+  color: #666;
+}

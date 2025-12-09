@@ -1,0 +1,415 @@
+.reto-oraciones-page {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+}
+
+.reto-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.reto-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.reto-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.reto-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.setup-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.setup-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.setup-card h2 {
+  color: #333;
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+}
+
+.config-group {
+  margin-bottom: 2rem;
+}
+
+.config-group label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.nivel-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nivel-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.nivel-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nivel-btn.active {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.input-group .btn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.input-group .btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.palabras-sugeridas {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.palabras-sugeridas p {
+  color: #333;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tag {
+  background: #f0f4ff;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.tag:hover {
+  background: #667eea;
+  color: white;
+}
+
+.historial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.historial-card h3 {
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+.historial-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historial-item {
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.historial-item.valida {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.historial-item.invalida {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.palabra-badge {
+  background: white;
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.estado {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.estado.ok {
+  color: #155724;
+}
+
+.estado.error {
+  color: #721c24;
+}
+
+.oracion-text {
+  margin: 0;
+  color: #333;
+  font-style: italic;
+}
+
+/* Game Section */
+.game-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.game-card {
+  padding: 2rem;
+}
+
+.game-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.palabra-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nivel-badge {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.palabra-actual {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.instruccion {
+  background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.instruccion h2 {
+  color: #333;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.oracion-input-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.oracion-input-container textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.oracion-input-container textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.oracion-input-container textarea:disabled {
+  background: #f9f9f9;
+  cursor: not-allowed;
+}
+
+.char-count {
+  color: #999;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.validacion-resultado {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid;
+}
+
+.validacion-resultado.valida {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.validacion-resultado.invalida {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.resultado-header h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.validacion-resultado.valida h3 {
+  color: #155724;
+}
+
+.validacion-resultado.invalida h3 {
+  color: #721c24;
+}
+
+.validacion-detalles p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.resultado-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #218838;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sugerencias {
+  background: #e7f3ff;
+  border: 2px solid #17a2b8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sugerencias h4 {
+  color: #0c5460;
+  margin: 0 0 1rem 0;
+}
+
+.sugerencias ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #0c5460;
+}
+
+.sugerencias li {
+  margin: 0.5rem 0;
+}
+
+.sugerencias strong {
+  color: #0c5460;
+}
