@@ -1,0 +1,51 @@
+{
+  "usuario_id": "8a163309",
+  "palabras": {},
+  "progreso_categorias": {
+    "sustantivo": {
+      "total": 0,
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "verbo": {
+      "total": 0,
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "adjetivo": {
+      "total": 0,
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "adverbio": {
+      "total": 0,
+      "aprendidas": 0,
+      "dominadas": 0
+    }
+  },
+  "progreso_dominios": {
+    "education": {
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "health": {
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "work": {
+      "aprendidas": 0,
+      "dominadas": 0
+    },
+    "general": {
+      "aprendidas": 0,
+      "dominadas": 0
+    }
+  },
+  "historial_sesiones": [],
+  "rendimiento": {
+    "fortalezas": [],
+    "debilidades": [],
+    "palabras_dificiles": [],
+    "palabras_faciles": []
+  }
+}

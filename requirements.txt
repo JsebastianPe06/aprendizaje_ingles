@@ -1,0 +1,8 @@
+python==3.13.5
+
+json==2.0.9
+
+# Dependencias para la interfaz gráfica
+PyQt6==6.5.0
+PyQt6-Qt6==6.5.0
+PyQt6-sip==13.5.0

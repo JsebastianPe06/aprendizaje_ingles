@@ -1,0 +1,37 @@
+{
+  "usuario_id": "8a163309",
+  "nombre": "Luis",
+  "email": "",
+  "fecha_registro": "2025-12-10T12:06:46.711092",
+  "ultima_sesion": null,
+  "nivel_actual": 0,
+  "nivel_cefr": "A1",
+  "experiencia": 0,
+  "preferencias": {
+    "temas_favoritos": [
+      "general"
+    ],
+    "tipos_reto_favoritos": [],
+    "dificultad_preferida": "intermedio",
+    "objetivo_diario": 5,
+    "notificaciones": true,
+    "modo_oscuro": false,
+    "idioma_interfaz": "es"
+  },
+  "estadisticas": {
+    "total_sesiones": 0,
+    "total_retos_completados": 0,
+    "total_palabras_aprendidas": 0,
+    "racha_actual": 0,
+    "racha_maxima": 0,
+    "tiempo_total_estudio": 0.0,
+    "precision_promedio": 0.0
+  },
+  "objetivos": {
+    "objetivo_semanal": 25,
+    "objetivo_mensual": 100,
+    "progreso_semanal": 0,
+    "progreso_mensual": 0
+  },
+  "logros": []
+}
