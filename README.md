@@ -178,7 +178,9 @@ python main.py
 ## 👨‍💻 Autores
 
 **Juan Sebastián Peñuela** - [JsebastianPe06](https://github.com/JsebastianPe06)
+
 **Juan Pablo Rodriguez** - [JuanPRodriguezzz](https://github.com/JuanPRodriguezzz)
+
 **Alejandro Bello León** - [abellol](https://github.com/abellol)
 
 ---
