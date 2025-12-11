@@ -53,7 +53,7 @@ class LoginWindow(QWidget):
         header_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
         # Título
-        title = QLabel("ENGLISH_APP")
+        title = QLabel("LINGUALEARN")
         title_font = QFont("Segoe UI", 32, QFont.Weight.Bold)
         title.setFont(title_font)
         title.setStyleSheet("color: white;")

@@ -38,7 +38,7 @@ class HeaderWidget(QWidget):
         layout.setContentsMargins(20, 10, 20, 10)
         
         # Logo/Título a la izquierda
-        title_label = QLabel("ENGLISH_APP")
+        title_label = QLabel("LINGUALEARN")
         title_font = QFont("Segoe UI", 18, QFont.Weight.Bold)
         title_label.setFont(title_font)
         title_label.setStyleSheet("color: #2563EB;")

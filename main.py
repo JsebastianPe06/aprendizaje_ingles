@@ -19,7 +19,7 @@ def run_gui():
 
 def main():
     """Función principal."""
-    parser = argparse.ArgumentParser(description='ENGLISH_APP - Sistema de aprendizaje de inglés')
+    parser = argparse.ArgumentParser(description='LINGUALEARN - Sistema de aprendizaje de inglés')
     parser.add_argument('--gui', action='store_true', help='Usar interfaz gráfica (PyQt6)')
     
     args = parser.parse_args()

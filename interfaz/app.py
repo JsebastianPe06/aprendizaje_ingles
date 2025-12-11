@@ -22,7 +22,7 @@ class EnglishApp(QApplication):
         super().__init__(argv)
         
         # Configurar aplicación
-        self.setApplicationName("ENGLISH_APP")
+        self.setApplicationName("LINGUALEARN")
         self.setApplicationDisplayName("Sistema de Aprendizaje de Inglés")
         self.setOrganizationName("EnglishLearning")
         

@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
         self.perfil = None
         self.is_logged_in = False
         # Configurar ventana
-        self.setWindowTitle("ENGLISH_APP - Sistema de Aprendizaje de Inglés")
+        self.setWindowTitle("LINGUALEARN - Sistema de Aprendizaje de Inglés")
         self.setGeometry(100, 100, 1200, 800)
         # Crear widgets
         self._setup_ui()
@@ -70,7 +70,7 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout(widget)
         layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         # Título
-        title = QLabel("¡Bienvenido a ENGLISH_APP!")
+        title = QLabel("¡Bienvenido a LINGUALEARN!")
         title_font = QFont("Segoe UI", 24, QFont.Weight.Bold)
         title.setFont(title_font)
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
