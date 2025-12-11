@@ -1,4 +1,4 @@
-# 📚 ENGLISH_APP - Sistema de Aprendizaje de Inglés
+# 📚 LINGUALEARN - Sistema de Aprendizaje de Inglés
 
 ## 📖 Descripción
 
