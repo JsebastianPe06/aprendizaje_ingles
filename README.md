@@ -2,7 +2,7 @@
 
 ## 📖 Descripción
 
-ENGLISH_APP es un sistema avanzado de aprendizaje de inglés basado en **estructuras de grafos** y **algoritmos de repetición espaciada (SRS)**. El sistema utiliza un grafo semántico para establecer relaciones entre palabras y conceptos, permitiendo un aprendizaje contextualizado y personalizado.
+LINGUALEARN es un sistema avanzado de aprendizaje de inglés basado en **estructuras de grafos** y **algoritmos de repetición espaciada (SRS)**. El sistema utiliza un grafo semántico para establecer relaciones entre palabras y conceptos, permitiendo un aprendizaje contextualizado y personalizado.
 
 ### Características Principales
 
